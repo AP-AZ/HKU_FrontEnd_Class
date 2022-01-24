@@ -8,9 +8,9 @@
         <meta http-equiv="x-ua-compatible" content="ie=edge">
     
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel='stylesheet' href='node_modules/font-awesome/css/font-awesome.min.css'>
-        <link rel='stylesheet' href='node_modules/bootstrap-social/bootstrap-social.css'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css" integrity="sha512-f8mUMCRNrJxPBDzPJx3n+Y5TC5xp6SmStstEfgsDXZJTcxBakoB5hvPLhAfJKa9rCvH+n3xpJ2vQByxLk4WP2g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/styles.css">
     <title>Ristorante Con Fusion</title>
 </head>
@@ -40,7 +40,16 @@
                     <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                 </div>
                 <div class='col-12 col-sm align-self-center'>
-                    <img src='img/logo.png' class='img-fluid'>
+                    <div class='row align-content-center'>
+                        <div class='col-12 col-sm-8 align-items-sm-center text-sm-center'>
+                            <img src='img/logo.png' class='img-fluid'>
+                        </div>
+                        <div class='col-12 col-sm-4 align-items-sm-center align-self-sm-center'>
+                            <form action='#reserveTable'>
+                                <input class='btn btn-warning' type='submit' value='Reserve A Table'>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,8 +61,7 @@
                 <h3>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class='col col-sm order-sm-first col-md'>
-                <!-- Using bootstrap 5, so the media and media-body classes are not present-->
-                <div class='d-flex'>
+                <div class='d-flex'><!-- Using bootstrap 5, so the media and media-body classes are not present. The classes used are per Bootstrap documentation-->
                     <img class='me-3 img-thumbnail align-self-center' src='img/uthappizza.png' alt='uthappizza'>
                     <div class=''>
                         <h2 class='mt-0'>Uthappizza <span class='badge bg-danger'>HOT</span> <span class='badge badge-pill bg-secondary'>$4.99</span></h2>
@@ -64,13 +72,18 @@
         </div>
 
 
-        <div class='row row-content'>
+        <div class='row row-content align-items-center'>
             <div class='col-12 col-sm-4 order-sm-first col-md-3'>
                 <h3>This Month's Promotions</h3>
             </div>
             <div class='col col-sm order-sm-last col-md'>
-                <h2>Weekend Grand Buffet</h2>
-                <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                <div class='d-flex'><!-- Using bootstrap 5, so the media and media-body classes are not present. The classes used are per Bootstrap documentation-->
+                    <div class=''><!-- Using bootstrap 5, so the media and media-body classes are not present. The classes used are per Bootstrap documentation-->
+                        <h2>Weekend Grand Buffet <span class='badge bg-danger'>NEW</span></h2>
+                        <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
+                    </div><!-- Using bootstrap 5, so the media and media-body classes are not present. The classes used are per Bootstrap documentation-->
+                    <img class='ml-3 img-thumbnail align-self-center' src='img/buffet.png' alt='buffet'>
+                </div>
             </div>
         </div>
 
@@ -86,6 +99,72 @@
                         <h2 class='mt-0'>Alberto Somayya</h2>
                         <h4 class='mt-0'>Executive Chef</h4>
                         <p class='d-none d-sm-block'>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row row-content justify-content-center' id='reserveTable'>
+            <div class='col-12 col-md-10 col-lg-8 justify-content-center'>
+                <div class='card'>
+                    <h3 class='card-header bg-primary text-white'>Reserve A Table</h3>
+                    <div class='card-body'>
+                        <dl class='row'>
+                            <dt class='col-12 col-md-4'>Number of Guests</dt>
+                            <dd class='col-12 col-md-8'>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='oneGuests' id='oneGuests' value=1>
+                                    <label class='form-check-label' for='oneGuests'>
+                                        1
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='twoGuests' id='twoGuests' value=2>
+                                    <label class='form-check-label' for='twoGuests'>
+                                        2
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='threeGuests' id='threeGuests' value=3>
+                                    <label class='form-check-label' for='threeGuests'>
+                                        3
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='fourGuests' id='fourGuests' value=4>
+                                    <label class='form-check-label' for='fourGuests'>
+                                        4
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='fiveGuests' id='fiveGuests' value=5>
+                                    <label class='form-check-label' for='fiveGuests'>
+                                        5
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='sixGuests' id='sixGuests' value=6>
+                                    <label class='form-check-label' for='sixGuests'>
+                                        6
+                                    </label>
+                                </div>
+                            </dd>
+                            <dt class='col-12 col-md-4'>Date and Time</dt>
+                            <dd class='col-12 col-md-8'>
+                                <div class='row'>
+                                    <div class='col'>
+                                        <div class='form-outline datepicker'>
+                                            <input type='date' class='form-control' id='resDate' value='1900-01-01'> 
+                                        </div>
+                                    </div>
+                                    <div class='col'>
+                                        <div class='form-outline datepicker'>
+                                            <input type='time' class='form-control' id='resTime' value='17:00'> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class='col-6 offset-4'><button class='btn btn-primary' role='button' type='submit' value='Submit'>Reserve</button></dd>
+                        </dl>
                     </div>
                 </div>
             </div>
