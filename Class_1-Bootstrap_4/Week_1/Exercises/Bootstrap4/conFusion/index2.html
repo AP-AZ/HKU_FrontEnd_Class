@@ -39,90 +39,39 @@
                 </div>
         </div>
     </nav>
-    <div id='reserveModal' class='modal fade' role='dialog'>
+    <div id='loginModal' class='modal fade' role='dialog'>
         <div class='modal-dialog modal-lg' role='content'>
             <div class='modal-content'>
                 <div class='modal-header'>
-                    <h4 class='modal-title'>Reserve A Table</h4>
-                    <button type='button' class='btn close' data-bs-dismiss='modal'>
-                        <h2>&times;</h2>
+                    <h4 class='modal-title'>Login</h4>
+                    <button type='button' class='close' data-bs-dismiss='modal'>
+                        &times;
                     </button>
                 </div>
                 <div class='modal-body'>
                     <form>
-                        <div class='col-12 col-md-10 col-lg-8 justify-content-center'>
-                            <dl class='row'>
-                                <dt class='col-12 col-md-4'>Number of Guests</dt>
-                                <dd class='col-12 col-md-8'>
-                                    <div class='form-check form-check-inline'>
-                                        <input class='form-check-input' type='radio' name='oneGuests' id='oneGuests' value=1>
-                                        <label class='form-check-label' for='oneGuests'>
-                                            1
+                        <div class='container-fluid'>
+                            <div class="row mt-2 mb-2">
+                                <div class="form-group col-sm-4">
+                                        <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                        <input type="email" class="form-control form-control-sm" id="exampleInputEmail3" placeholder="Enter email">
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                    <input type="password" class="form-control form-control-sm" id="exampleInputPassword3" placeholder="Password">
+                                </div>
+                                <div class="col-sm-auto">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox">
+                                        <label class="form-check-label"> Remember me
                                         </label>
                                     </div>
-                                    <div class='form-check form-check-inline'>
-                                        <input class='form-check-input' type='radio' name='twoGuests' id='twoGuests' value=2>
-                                        <label class='form-check-label' for='twoGuests'>
-                                            2
-                                        </label>
-                                    </div>
-                                    <div class='form-check form-check-inline'>
-                                        <input class='form-check-input' type='radio' name='threeGuests' id='threeGuests' value=3>
-                                        <label class='form-check-label' for='threeGuests'>
-                                            3
-                                        </label>
-                                    </div>
-                                    <div class='form-check form-check-inline'>
-                                        <input class='form-check-input' type='radio' name='fourGuests' id='fourGuests' value=4>
-                                        <label class='form-check-label' for='fourGuests'>
-                                            4
-                                        </label>
-                                    </div>
-                                    <div class='form-check form-check-inline'>
-                                        <input class='form-check-input' type='radio' name='fiveGuests' id='fiveGuests' value=5>
-                                        <label class='form-check-label' for='fiveGuests'>
-                                            5
-                                        </label>
-                                    </div>
-                                    <div class='form-check form-check-inline'>
-                                        <input class='form-check-input' type='radio' name='sixGuests' id='sixGuests' value=6>
-                                        <label class='form-check-label' for='sixGuests'>
-                                            6
-                                        </label>
-                                    </div>
-                                </dd>
-                                <dt class='col-12 col-md-4 mt-2'>Section</dt>
-                                <dd class='col-12 col-md-8 mt-2'>
-
-
-                                    <section>
-                                        <input type='radio' name='options' id='noSmoke' class='btn-check' checked>
-                                        <label class='btn btn-success' for='noSmoke'>Non-Smoking</label>
-                                        
-                                        <input type='radio' name='options' id='smoke' class='btn-check'>
-                                        <label class='btn btn-danger' for='smoke'>Smoking</label>
-                                    </section>
-                                </dd>
-                                <dt class='col-12 col-md-4'>Date and Time</dt>
-                                <dd class='col-12 col-md-8'>
-                                    <div class='row'>
-                                        <div class='col'>
-                                            <div class='form-outline datepicker'>
-                                                <input type='date' class='form-control' id='resDate' value='1900-01-01'> 
-                                            </div>
-                                        </div>
-                                        <div class='col'>
-                                            <div class='form-outline datepicker'>
-                                                <input type='time' class='form-control' id='resTime' value='17:00'> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </dd>
-                                <dd class='col-6 offset-4'>
-                                    <button class='btn btn-secondary' role='button' type='submit' value='Submit'>Cancel</button>
-                                    <button class='btn btn-primary' role='button' type='submit' value='Submit'>Reserve</button>
-                                </dd>
-                            </dl>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-bs-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>        
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -143,7 +92,8 @@
                         </div>
                         <div class='col-12 col-sm-4 align-items-sm-center align-self-sm-center'>
                             <form action='#reserveTable'>
-                                <input class='btn btn-warning' value='Reserve A Table' data-bs-toggle='modal' data-bs-target='#reserveModal'>
+                                <input class='btn btn-warning' type='submit' data-bs-toggle='tooltip' value='Reserve A Table'
+                                    data-bs-html='true' title='Or Call Us At <br><strong>+852 12345678</strong>' data-bs-placement='bottom' data-bs-trigger='hover focus'>
                             </form>
                         </div>
                     </div>
@@ -191,9 +141,6 @@
                     <a class='carousel-control-next' href='#myCarousel' role='button' data-bs-slide='next'>
                         <span class='carousel-control-next-icon'></span>
                     </a>
-                    <button class='btn btn-danger btn-sm' id='carouselButton'>
-                        <span class='fa fa-pause'></span>
-                    </button>
                 </div>
             </div>
         </div>
@@ -243,6 +190,72 @@
                         <h2 class='mt-0'>Alberto Somayya</h2>
                         <h4 class='mt-0'>Executive Chef</h4>
                         <p class='d-none d-sm-block'>Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row row-content justify-content-center' id='reserveTable'>
+            <div class='col-12 col-md-10 col-lg-8 justify-content-center'>
+                <div class='card'>
+                    <h3 class='card-header bg-primary text-white'>Reserve A Table</h3>
+                    <div class='card-body'>
+                        <dl class='row'>
+                            <dt class='col-12 col-md-4'>Number of Guests</dt>
+                            <dd class='col-12 col-md-8'>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='oneGuests' id='oneGuests' value=1>
+                                    <label class='form-check-label' for='oneGuests'>
+                                        1
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='twoGuests' id='twoGuests' value=2>
+                                    <label class='form-check-label' for='twoGuests'>
+                                        2
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='threeGuests' id='threeGuests' value=3>
+                                    <label class='form-check-label' for='threeGuests'>
+                                        3
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='fourGuests' id='fourGuests' value=4>
+                                    <label class='form-check-label' for='fourGuests'>
+                                        4
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='fiveGuests' id='fiveGuests' value=5>
+                                    <label class='form-check-label' for='fiveGuests'>
+                                        5
+                                    </label>
+                                </div>
+                                <div class='form-check form-check-inline'>
+                                    <input class='form-check-input' type='radio' name='sixGuests' id='sixGuests' value=6>
+                                    <label class='form-check-label' for='sixGuests'>
+                                        6
+                                    </label>
+                                </div>
+                            </dd>
+                            <dt class='col-12 col-md-4'>Date and Time</dt>
+                            <dd class='col-12 col-md-8'>
+                                <div class='row'>
+                                    <div class='col'>
+                                        <div class='form-outline datepicker'>
+                                            <input type='date' class='form-control' id='resDate' value='1900-01-01'> 
+                                        </div>
+                                    </div>
+                                    <div class='col'>
+                                        <div class='form-outline datepicker'>
+                                            <input type='time' class='form-control' id='resTime' value='17:00'> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </dd>
+                            <dd class='col-6 offset-4'><button class='btn btn-primary' role='button' type='submit' value='Submit'>Reserve</button></dd>
+                        </dl>
                     </div>
                 </div>
             </div>
@@ -297,28 +310,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         <script>
             $(document).ready(function() {
-                $('#myCarousel').carousel({interval: 2000, pause: false});
-                $('#carouselButton').click(function() {
-                    if ($('#carouselButton').children('span').hasClass('fa-pause')) {
-                        
-                        $('#myCarousel').carousel('pause');
-                        $('#carouselButton').children('span').removeClass('fa-pause');
-                        $('#carouselButton').children('span').addClass('fa-play');
-                        console.log('Carousel Paused');
-
-                    }
-                    else if ($('#carouselButton').children('span').hasClass('fa-play')) {
-                        
-                        $('#myCarousel').carousel('cycle');
-                        $('#carouselButton').children('span').removeClass('fa-play');
-                        $('#carouselButton').children('span').addClass('fa-pause');
-                        console.log('Carousel Played');
-
-                    }
-                    
-                    
-                });
-            })
+                $('[data-bs-toggle="tooltip"]').tooltip();
+            });
         </script>
 </body>
 </html>
